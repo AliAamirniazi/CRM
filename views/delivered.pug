@@ -1,0 +1,43 @@
+extends adminBase
+
+block content
+    main.main
+        h3.heading-secondary.ma-bt-lg Delivered Orders
+        h3
+            table.table
+                thead.thead-dark
+                    tr
+                    th(scope='col') #
+                    th(scope='col') name
+                    th(scope='col') Price
+                    th(scope='col') Nmae
+                    th(scope='col') email
+                    th(scope='col') Delivery Status
+                    th(scope='col') action
+                        - var n = 1;
+                        each oder in oders
+                            if (oder.delivered === 'delivered')
+                                tbody
+                                    tr
+                                    td= n++
+                                    td= oder.tour.name
+                                    td= oder.price
+                                    td= oder.user.name
+                                    td= oder.user.email
+                                    td= oder.delivered
+                                    td
+                                        form(action=`/oders-action/${oder._id}` method='POST')
+                                            label(for='delivered') Choose a action:
+                                            select#cars(name='action')
+                                                option(value='pending') Pending
+                                                option(value='shiped') Shiped
+                                                option(value='delivered') Delivered
+                                            
+                                            br
+                                            br
+                                            input(type='submit' value='Submit')
+                                    
+                                  
+                                
+                                
+   

@@ -1,0 +1,17 @@
+extends adminBase
+
+block content
+    main.main
+
+        h2.heading-secondary.ma-bt-lg Mail
+        form.form.form--signup(action='/send-mail' method='POST' )
+            .form__group
+                label.form__label(for='name') Subject
+                input#name.form__input(type='text', required, name='subject')
+           
+            .form__group.ma-bt-md
+                label.form__label(for='subject') Description
+                input#subject.form__input(type='text', required, minlength='8', name='description')
+            
+            .form__group
+                button.btn.btn--green Send Mail

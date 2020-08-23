@@ -1,0 +1,27 @@
+extends adminBase
+
+block content
+    main.main
+        h3.heading-secondary.ma-bt-lg Users
+        h3
+            table.table
+                thead.thead-dark
+                    tr
+
+                    th(scope='col') name
+                    th(scope='col') email
+                    th(scope='col') Photo
+                    th(scope='col') Detail
+
+                        each user in users
+                            tbody
+                                tr
+                                td= user.name
+                                td= user.email
+                                td
+                                    img(src=`/img/users/${user.photo}` alt=`Photo of ${user.name}` style='width:100px; height:100px;')
+                                td
+                                    a(href=`/userDetail/${user._id}`) Detail
+
+
+

@@ -1,0 +1,25 @@
+extends adminBase
+
+block content
+    main.main
+        h3.heading-secondary.ma-bt-lg Complain Detail
+        h3
+            .card.border-secondary.mb-3(style='max-width: 100rem;' height='200')
+                .card-header= `Name: ${complain.user.name}`
+                .card-body.text-secondary
+                    h3.card-title= `Subject: ${complain.subject}`
+                    p.card-text= complain.description
+          
+            h2.heading-secondary.ma-bt-lg Reply
+            form.form.form--signup(action='/replyMail' method='POST' )
+                .form__group
+                    label.form__label(for='relpy') 
+                    input#reply.form__input(type='text', placeholder='Reply......', required, name='reply')
+                .form__group
+                    label.form__label(for='relpy') 
+                    input#reply.form__input(type='hidden',value=`${complain.email}`, required, name='email')
+                .form__group
+                    label.form__label(for='relpy') 
+                    input#status.form__input(type='hidden',value='resolved', required, name='status')
+                .form__group
+                    button.btn.btn--green Send

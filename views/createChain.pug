@@ -1,0 +1,21 @@
+extends adminBase
+
+block content
+    main.main
+
+        h2.heading-secondary.ma-bt-lg Create Product
+        form.form.form--createProduct(action='/create-chain' method='POST')
+            .form__group
+                label.form__label(for='name') Product
+                input#name.form__input(type='text', required, name='product')
+            .form__group
+                label.form__label(for='price') Client
+                input#price.form__input(type='text',required , name='client')
+            .form__group
+                label.form__label(for='quantity') Price
+                input#quantity.form__input(type='text',required , name='price')
+            .form__group.ma-bt-md
+                label.form__label(for='description') Dtae
+                input#description.form__input(type='text-area',  required, minlength='4', name='date')
+            .form__group
+                button.btn.btn--green Create Product

@@ -1,0 +1,46 @@
+extends adminBase
+
+block content
+    main.main
+        h3.heading-secondary.ma-bt-lg All Orders
+        h3
+            table.table
+                thead.thead-dark
+                    tr
+                    th(scope='col') #
+                    th(scope='col') name
+                    th(scope='col') Price
+                    th(scope='col') Nmae
+                    th(scope='col') email
+                    th(scope='col') Delivery Status
+                    th(scope='col') action
+                        - var n = 1;
+                        each oder in oders
+                            tbody
+                                tr
+                                td= n++
+                                td= oder.tour.name
+                                td= oder.price
+                                td= oder.user.name
+                                td= oder.user.email
+                                td= oder.delivered
+                                td
+                                  form(action=`/oders-action/${oder._id}` method='POST')
+                                    label(for='delivered') Choose a action:
+                                    select#cars(name='action')
+                                        option(value='shiped') shiped
+                                        option(value='delivered') delivered
+                                    input#name.form__input(type='hidden',value=`${oder.user.name}` placeholder='name', required, name='name')
+                                    input#name.form__input(type='hidden',value=`${oder.price}` placeholder='name', required, name='price')
+                                    input#name.form__input(type='hidden',value=`${oder.tour.name}` placeholder='name', required, name='product')
+                                    input#name.form__input(type='hidden',value=`${oder.user.email}` placeholder='name', required, name='email')
+                                    input#name.form__input(type='hidden',value=`${oder.tour._id}` placeholder='name', required, name='id')
+                                    br
+                                    br
+                                    input(type='submit' value='Submit')
+                                
+                                  
+                                
+                                
+    //- if (oder.delivered === 'fasle') 
+    //-  p delivered

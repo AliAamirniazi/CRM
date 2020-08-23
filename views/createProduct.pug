@@ -1,0 +1,25 @@
+extends adminBase
+
+block content
+    main.main
+
+        h2.heading-secondary.ma-bt-lg Create Product
+        form.form.form--createProduct(action='/create-product' method='POST' enctype='multipart/form-data')
+            .form__group
+                label.form__label(for='name') Name
+                input#name.form__input(type='text', required, name='name')
+            .form__group
+                label.form__label(for='price') Price
+                input#price.form__input(type='text',required , name='price')
+            .form__group
+                label.form__label(for='quantity') quantity
+                input#quantity.form__input(type='text',required , name='quantity')
+            .form__group.ma-bt-md
+                label.form__label(for='description') Description
+                input#description.form__input(type='text-area',  required, minlength='8', name='description')
+            .form__group.form__photo-upload
+              img.form__user-photo(src=``, alt='')
+              input.form__upload(type='file', accept='image/*', id='imageCover', name='imageCover')
+              label(for='imageCover') Choose new photo
+            .form__group
+                button.btn.btn--green Create Product

@@ -1,0 +1,18 @@
+extends adminBase
+block content
+    main.main
+
+        h2.heading-secondary.ma-bt-lg SMS
+        form.form.form--signup(action='/send-sms' method='POST' )
+            .form__group
+                label.form__label(for='name') Subject
+                input#name.form__input(type='text', required, name='subject')
+            .form__group
+                label.form__label(for='email') Phone Number
+                input#email.form__input(type='text',  required , name='number')
+            .form__group.ma-bt-md
+                label.form__label(for='subject') Description
+                input#subject.form__input(type='text', required, minlength='8', name='description')
+            
+            .form__group
+                button.btn.btn--green Send SMS

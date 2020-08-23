@@ -1,0 +1,13 @@
+[{"Key":"TR0", "Record":{"product":"Dell AlienWare","client":"Ali Niazi","price":"1300","date":"2020-08-05"}},
+    {"Key":"TR1", "Record":{"product":"Apple air pods 3","client":"shaheer","price":"1500","date":"2020-08-05"}},
+    {"Key":"TR2", "Record":{"product":"Hubolt Watch","client":"haider","price":"250","date":"2020-08-06"}},
+    {"Key":"TR3", "Record":{"product":"Mac Air","client":"taimoor","price":"450","date":"2020-08-06"}},
+    {"Key":"TR4", "Record":{"product":"Dell AlienWare","client":"shaheer","price":"S","date":"2020-08-06"}},
+    {"Key":"TR5", "Record":{"prodduct":"Microsoft Surfacebook Pro","client":"taimoor","price":"205","date":"2020-08-07"}},
+    {"Key":"TR6", "Record":{"product":"Iphone 11 Pro","client":"taimoor","price":"750","date":"2020-08-07"}},
+    {"Key":"TR7", "Record":{"product":"Hp Spectre","client":"Qadeer","price":"550","date":"2020-08-07"}},
+    {"Key":"TR8", "Record":{"product":"Mac Air","client":"haider","price":"450","date":"2020-08-09"}},
+    {"Key":"TR9", "Record":{"product":"Dell AlienWare","client":"Qadeer","price":"1300","date":"2020-08-10"}},{"Key":"TR9", "Record":{"product":"Apple air pods 3","client":"Ali Niazi","price":"499","date":"2020-08-10"}}]
+    
+
+

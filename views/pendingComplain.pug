@@ -1,0 +1,32 @@
+extends adminBase
+
+block content
+    main.main
+        h3.heading-secondary.ma-bt-lg Pending Complain 
+        h3
+            table.table
+                thead.thead-dark
+                    tr
+                    th(scope='col') #
+                    th(scope='col') subject
+                    th(scope='col') description
+                    th(scope='col') email
+                    th(scope='col') Status
+                    th(scope='col') User Name
+                    th(scope='col') View
+                        - var n = 1;
+                        each complain in complains
+                            if (complain.status === 'pending')
+                                tbody
+                                    tr
+                                    td= n++
+                                    td= complain.subject
+                                    td= complain.description
+                                    td= complain.email
+                                    td= complain.status
+                                    td= complain.user.name
+                                    td
+                                        a(href=`/complainDetail/${complain._id}`) Detail
+
+
+

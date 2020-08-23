@@ -1,0 +1,32 @@
+extends adminBase
+
+block content
+    main.main
+        h3.heading-secondary.ma-bt-lg leads
+        h3
+            table.table
+                thead.thead-dark
+                    tr
+                    th(scope='col') #
+                    th(scope='col') User
+                    th(scope='col') Product
+                    th(scope='col') email
+                    th(scope='col') Send Mail
+                        - var n = 1;
+                        each lead in leads
+                            if (lead.leads === 'leads')
+                                tbody
+                                    tr
+                                    td= n++
+                                    td= lead.user.name
+                                    td= lead.tour.name
+                                    td= lead.user.email
+                                    td
+                                        form.form.form--Complain(action=`/leadMail/${lead._id}` method='POST' )
+                                            input#name.form__input(type='hidden',value=`${lead.user.name}` placeholder='name', required, name='name')
+                                            input#email.form__input(type='hidden',value=`${lead.user.email}` placeholder='name', required, name='email')
+                                            input#tour.form__input(type='hidden',value=`${lead.tour.name}` placeholder='name', required, name='product')
+                                            input#slug.form__input(type='hidden',value=`${lead.tour.slug}` placeholder='name', required, name='slug')
+                                            input(type='submit' value='Submit')
+
+

@@ -1,0 +1,20 @@
+extends base
+
+block content
+    main.main
+
+        h2.heading-secondary.ma-bt-lg Send Complain
+        form.form.form--Complain(action=`/register-complain/${user._id}` method='POST' )
+            .form__group
+                label.form__label(for='name') Subject
+                input#name.form__input(type='text', required, name='subject')
+            .form__group
+                label.form__label(for='name') Description
+                input#description.form__input(type='text', required, name='description')    
+            .form__group
+                label.form__label(for='email') Email address
+                input#email.form__input(type='email', placeholder='you@example.com', required , name='email')
+            
+            
+            .form__group
+                button.btn.btn--green Send
