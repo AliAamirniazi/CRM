@@ -8,8 +8,8 @@ const { getMaxListeners } = require('../models/userModel');
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: 'aliniazisk@gmail.com',
-    pass: 'mianwali1234' 
+    user: '', // type your email here 
+    pass: '' // type your password here  
   }
 });
 
