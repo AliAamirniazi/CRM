@@ -87,8 +87,8 @@ exports.sendComplain = catchAsync(async (req, res, next) => {
    const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: 'aliniazisk@gmail.com',
-    pass: 'mianwali1234' 
+    user: '', // type your password here
+    pass: '' // type your email here 
   }
 });
 
